@@ -20,9 +20,14 @@ module.exports = {
     'import/no-unresolved': 'off',
     'import/extensions': 'off',
   },
-  globals: {
-    describe: 'readonly',
-    it: 'readonly',
-    expect: 'readonly',
-  },
+  overrides: [
+    {
+      files: [
+        '**/*.test.{j,t}s?(x)',
+      ],
+      env: {
+        jest: true,
+      },
+    },
+  ],
 };

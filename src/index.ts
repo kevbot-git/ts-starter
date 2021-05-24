@@ -1,8 +1,7 @@
 import Message from './Message';
 
-export default (a: number, b: number) => {
-  const res = Message(a, b);
-  console.log('result is', res);
+export default () => {
+  const res = new Message();
 
-  return res;
+  return res.toString();
 };

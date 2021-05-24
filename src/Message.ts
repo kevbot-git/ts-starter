@@ -1,6 +1,11 @@
-export default (a: number, b: number) => {
-  if ('development' === process.env.NODE_ENV) {
-    console.log('boop');
+export default class Message {
+  test: string;
+
+  constructor() {
+    this.test = '123';
   }
-  return a + b;
-};
+
+  toString(): string {
+    return this.test;
+  }
+}
